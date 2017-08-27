@@ -14,6 +14,12 @@
 # limitations under the License.
 #
 
+# Camera
+PRODUCT_PACKAGES += \
+    camera.apq8084 \
+    libstlport \
+    libxml2
+
 # IR Blaster
 PRODUCT_PACKAGES += \
     consumerir.apq8084
