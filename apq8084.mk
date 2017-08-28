@@ -28,5 +28,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     lights.APQ8084
 
+# Radio
+PRODUCT_PACKAGES += \
+    libshim_ril
+
 # Common Qualcomm
 $(call inherit-product, device/samsung/qcom-common/qcom-common.mk)
