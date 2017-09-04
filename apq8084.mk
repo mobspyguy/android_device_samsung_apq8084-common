@@ -48,5 +48,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libshim_ril
 
+# Thermal engine
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/thermal-engine.conf:system/etc/thermal-engine.conf
+
 # Common Qualcomm
 $(call inherit-product, device/samsung/qcom-common/qcom-common.mk)
