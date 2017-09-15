@@ -58,6 +58,9 @@ TARGET_SPECIFIC_HEADER_PATH := device/samsung/apq8084-common/include
 TARGET_INIT_VENDOR_LIB := libinit_apq8084
 TARGET_RECOVERY_DEVICE_MODULES := libinit_apq8084
 
+# Extended Filesystem Support
+TARGET_KERNEL_HAVE_EXFAT := true
+
 # Legacy BLOB Support
 TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 
