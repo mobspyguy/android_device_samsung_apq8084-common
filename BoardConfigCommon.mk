@@ -61,6 +61,9 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_apq8084
 # Extended Filesystem Support
 TARGET_KERNEL_HAVE_EXFAT := true
 
+# Keymaster.  We provide our own to workaround a Samsung quirk
+TARGET_PROVIDES_KEYMASTER := true
+
 # Legacy BLOB Support
 TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 
