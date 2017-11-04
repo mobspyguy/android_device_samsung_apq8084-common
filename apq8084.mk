@@ -23,7 +23,8 @@ $(call inherit-product-if-exists, vendor/samsung/apq8084-common/apq8084-common-v
 PRODUCT_PACKAGES += \
     camera.apq8084 \
     libstlport \
-    libxml2
+    libxml2 \
+    Snap
 
 # GPS
 PRODUCT_COPY_FILES += \
