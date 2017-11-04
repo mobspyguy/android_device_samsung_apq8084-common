@@ -14,6 +14,11 @@
 # limitations under the License.
 #
 
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+
+# Get non-open-source specific aspects
+$(call inherit-product-if-exists, vendor/samsung/apq8084-common/apq8084-common-vendor.mk)
+
 # Camera
 PRODUCT_PACKAGES += \
     camera.apq8084 \
@@ -43,10 +48,6 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml
-
-# Radio
-PRODUCT_PACKAGES += \
-    libshim_ril
 
 # Thermal engine
 PRODUCT_COPY_FILES += \
