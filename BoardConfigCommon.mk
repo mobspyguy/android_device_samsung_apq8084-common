@@ -45,6 +45,8 @@ BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
 TARGET_KERNEL_CONFIG := trltexx_defconfig
 TARGET_KERNEL_SELINUX_CONFIG := selinux_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/apq8084
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-eabi-
+KERNEL_TOOLCHAIN := /home/mobspyguy/Android/tools/gcc-linaro-4.9-2016.02-x86_64_arm-eabi/bin
 
 # Camera
 TARGET_USE_COMPAT_GRALLOC_ALIGN := true
@@ -56,6 +58,7 @@ TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY := libcamera_parameters_ext
 # Dexpreopt
 ifeq ($(HOST_OS),linux)
   ifneq ($(TARGET_BUILD_VARIANT),eng)
+    DONT_DEXPREOPT_PREBUILTS := true
     WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY ?= false
     WITH_DEXPREOPT := true
   endif
